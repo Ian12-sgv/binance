@@ -1,0 +1,28 @@
+:root {
+  --width-full: 100%;
+  --height-90vh: 90vh;
+  --display-flex: flex;
+  --flex-direction-column: column;
+  --align-items-center: center;
+  --justify-content-center: center;
+  --border-1px-solid: 1px solid #ccc;
+  --padding-20px: 20px;
+  --border-radius-8px: 8px;
+  --box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  --width-50: 50%;
+  --height-50: 50%;
+  --background-color-white: #ffffff;
+  --width-75: 75%;
+  --text-align-left: left;
+  --margin-bottom-10px: 10px;
+  --width-70: 70%;
+  --padding-10px: 10px;
+  --border-radius-5px: 5px;
+  --background-color-black: #000000;
+  --color-white: #fff;
+  --border-none: none;
+  --cursor-pointer: pointer;
+  --transition-0.3s: 0.3s ease;
+  --color-link: rgb(9, 101, 238);
+  --margin-top-10px: 10px;
+}
