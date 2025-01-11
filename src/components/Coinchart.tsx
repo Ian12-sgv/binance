@@ -11,6 +11,10 @@ import {
   Tooltip,
 } from "chart.js";
 import zoomPlugin from "chartjs-plugin-zoom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
+import "../style/Navbar.css";
+import "../style/Chart.css";
 
 ChartJS.register(
   CategoryScale,
@@ -95,32 +99,60 @@ const CoinChart = () => {
 
   return (
     <div>
-      <h2>{symbol} Chart</h2>
-      <Bar
-        data={chartData}
-        options={{
-          responsive: true,
-          plugins: {
-            title: { display: true, text: `${symbol} Prices` },
-            zoom: {
-              pan: {
+      <div className="nav-coin ">
+        {" "}
+        <h2>{symbol} Chart</h2>
+        <a onClick={() => navigate("/dashboard")} style={{ color: "white" }}>
+          <FontAwesomeIcon icon={faRightToBracket} />
+        </a>
+      </div>
+      <div className="coin-chart">
+        <Bar
+          data={chartData}
+          options={{
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              title: {
+                display: true,
+                text: `${symbol} Prices`,
+                font: { size: 20, family: "Arial", weight: "bold" },
+                padding: { top: 10, bottom: 30 },
+              },
+              legend: {
+                display: true,
+                position: "top",
+                labels: { font: { size: 14, family: "Arial" }, color: "white" },
+              },
+              tooltip: {
                 enabled: true,
-                mode: "x",
+                backgroundColor: "rgba(0,0,0,0.7)",
+                titleFont: { size: 16, family: "Arial", weight: "bold" },
+                bodyFont: { size: 14, family: "Arial" },
+                padding: 10,
               },
               zoom: {
-                wheel: {
-                  enabled: true,
+                pan: { enabled: true, mode: "x" },
+                zoom: {
+                  wheel: { enabled: true },
+                  pinch: { enabled: true },
+                  mode: "x",
                 },
-                pinch: {
-                  enabled: true,
-                },
-                mode: "x",
               },
             },
-          },
-        }}
-      />
-      <button onClick={() => navigate("/dashboard")}>Volver a Buscar</button>
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { font: { size: 12, family: "Arial" }, color: "white" },
+              },
+              y: {
+                grid: { color: "#ccc" },
+                ticks: { font: { size: 12, family: "Arial" }, color: "white" },
+              },
+            },
+          }}
+        />
+      </div>
     </div>
   );
 };

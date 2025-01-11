@@ -1,4 +1,218 @@
 .nabvar {
   width: 100%;
   height: 100%;
+  background-color: black;
+}
+
+.market-data {
+  width: 98%;
+  height: 100%;
+  color: white;
+  padding: 20px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 97%;
+}
+
+.search-input {
+  padding: 10px;
+  border-radius: 5px 0px 0px 5px;
+  border: none;
+}
+
+.button-search {
+  padding: 10px;
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.button-search:hover {
+  background-color: #0056b3;
+}
+
+.market-data-table {
+  width: 98%;
+  height: 70vh;
+  overflow-y: scroll;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.market-data-table::-webkit-scrollbar {
+  display: none;
+}
+
+.market-data-table-container {
+  width: 100%;
+}
+
+.market-data-table th,
+.market-data-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.market-data-table button {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.market-data-table button:hover {
+  background-color: #218838;
+}
+
+.market-data-table-header {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  z-index: 1;
+}
+
+/* Dispositivos móviles pequeños */
+@media (max-width: 480px) {
+  .nabvar {
+    height: auto;
+  }
+  .market-data {
+    padding: 10px;
+    width: 134%;
+  }
+  .header-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .search-input,
+  .button-search {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .market-data-table {
+    height: 100vh;
+    width: 100%;
+  }
+  .search-container {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-gap: 10px;
+    width: 40%;
+  }
+  .search-container {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-gap: 10px;
+    width: 50%;
+  }
+  .market-data-table-container {
+    width: 100%;
+  }
+}
+
+/* Dispositivos móviles grandes */
+@media (min-width: 481px) and (max-width: 768px) {
+  .nabvar {
+    height: auto;
+  }
+  .market-data {
+    padding: 15px;
+  }
+  .header-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-input,
+  .button-search {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .market-data-table {
+    height: 60vh;
+  }
+  .search-container {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-gap: 10px;
+    width: 50%;
+  }
+}
+
+/* Tablets y dispositivos móviles grandes en modo horizontal */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nabvar {
+    height: auto;
+  }
+  .market-data {
+    padding: 20px;
+  }
+  .header-nav {
+    flex-direction: row;
+    align-items: center;
+  }
+  .search-input,
+  .button-search {
+    width: auto;
+    margin-bottom: 0;
+  }
+  .market-data-table {
+    height: 70vh;
+  }
+}
+
+/* Laptops y pantallas de escritorio pequeñas */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .nabvar {
+    height: auto;
+  }
+  .market-data {
+    padding: 20px;
+  }
+  .header-nav {
+    flex-direction: row;
+    align-items: center;
+  }
+  .search-input,
+  .button-search {
+    width: auto;
+    margin-bottom: 0;
+  }
+  .market-data-table {
+    height: 70vh;
+  }
+}
+
+/* Pantallas de escritorio grandes */
+@media (min-width: 1201px) {
+  .nabvar {
+    height: auto;
+  }
+  .market-data {
+    padding: 20px;
+  }
+  .header-nav {
+    flex-direction: row;
+    align-items: center;
+  }
+  .search-input,
+  .button-search {
+    width: auto;
+    margin-bottom: 0;
+  }
+  .market-data-table {
+    height: 70vh;
+  }
 }

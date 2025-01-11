@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Binance from "../assets/svg/Binance.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import "../style/Navbar.css";
 
 function Navbar() {
@@ -21,8 +24,15 @@ function Navbar() {
   }
   return (
     <nav className="nav">
-      <h2>Bienvenido, {loggedInUser.username}</h2>{" "}
-      <button onClick={handleLogout}>Cerrar sesión</button>{" "}
+      <div className="logo-container">
+        <img src={Binance} alt="Binance" className="logo-img" />
+        <h2 className="logo">BINANCE</h2>{" "}
+      </div>
+      <div>
+        <a onClick={handleLogout}>
+          <FontAwesomeIcon icon={faRightToBracket} />
+        </a>{" "}
+      </div>
     </nav>
   );
 }

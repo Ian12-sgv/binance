@@ -1,0 +1,44 @@
+.coin-chart {
+  width: 100%;
+  height: 50rem;
+}
+
+/* Dispositivos móviles pequeños */
+@media (max-width: 480px) {
+  .coin-chart {
+    width: 100%;
+    height: 30rem;
+  }
+}
+
+/* Dispositivos móviles grandes */
+@media (min-width: 481px) and (max-width: 768px) {
+  .coin-chart {
+    width: 100%;
+    height: 35rem;
+  }
+}
+
+/* Tablets y dispositivos móviles grandes en modo horizontal */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .coin-chart {
+    width: 100%;
+    height: 40rem;
+  }
+}
+
+/* Laptops y pantallas de escritorio pequeñas */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .coin-chart {
+    width: 100%;
+    height: 50rem;
+  }
+}
+
+/* Pantallas de escritorio grandes */
+@media (min-width: 1201px) {
+  .coin-chart {
+    width: 100%;
+    height: 55rem;
+  }
+}
