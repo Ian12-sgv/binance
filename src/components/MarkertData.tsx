@@ -43,7 +43,7 @@ const SearchMarketData = () => {
         <div className="search-container">
           <input
             type="text"
-            placeholder="Search for a coin"
+            placeholder="example: BTC-btc"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="search-input"
