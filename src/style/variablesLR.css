@@ -30,7 +30,7 @@
 /* Dispositivos móviles pequeños */
 @media (max-width: 480px) {
   :root {
-    --width-50: 80%;
+    --width-50: 0%;
     --height-50: 45%;
   }
 }
