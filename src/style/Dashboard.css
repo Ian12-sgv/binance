@@ -90,7 +90,7 @@
   }
   .market-data {
     padding: 10px;
-    width: 134%;
+    width: 94%;
   }
   .header-nav {
     flex-direction: column;
@@ -116,7 +116,7 @@
     display: grid;
     grid-template-columns: 5fr 1fr;
     grid-gap: 10px;
-    width: 50%;
+    width: 60%;
   }
   .market-data-table-container {
     width: 100%;
